@@ -79,7 +79,7 @@ def test_draw_a_picture():
 #       :type window: rg.RoseWindow
 #     """
 # -------------------------------------------------------------------------
-#  TODO: 1. Implement and test the draw_a_picture function.
+#  DONE: 1. Implement and test the draw_a_picture function.
 #           Tests have been written for you (above in main).
 #  We suggest breaking this into multiple commits.
 #     Can you show the right circle?
@@ -95,6 +95,17 @@ def test_draw_a_picture():
 #
 
 def draw_a_picture(point, n, color, window):
+    circle1 = rg.Circle(point,50)
+    circle1.fill_color = color
+    circle1.attach_to(window)
+    for k in range(n):
+        circle = rg.Circle(rg.Point(point.x+ 25 * k,point.y + 15 * k),50)
+        circle.fill_color = color
+        circle.attach_to(window)
+        window.render(.5)
+
+
+
 
     return
 
